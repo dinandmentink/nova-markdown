@@ -1,7 +1,7 @@
 {
     "name": "dinandmentink/nova-markdown",
-    "description": "A Laravel Nova field.",
-    "keywords": ["laravel", "nova"],
+    "description": "A Laravel Nova Markdown Field.",
+    "keywords": ["laravel", "nova", "field", "markdown"],
     "license": "MIT",
     "require": {
         "php": ">=7.1.0"
