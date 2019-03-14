@@ -1,6 +1,6 @@
 <?php
 
-namespace Dbe\Markdown;
+namespace DinandMentink\Markdown;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Events\ServingNova;

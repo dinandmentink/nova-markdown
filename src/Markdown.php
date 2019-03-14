@@ -1,6 +1,6 @@
 <?php
 
-namespace Dbe\Markdown;
+namespace DinandMentink\Markdown;
 
 use Laravel\Nova\Fields\Field;
 
