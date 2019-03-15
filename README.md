@@ -25,7 +25,7 @@ public function fields(Request $request)
 }
 ```
 
-It will accept all default Nova options.
+It will accept all default Nova options:
 
 ```php
 use DinandMentink\Markdown\Markdown;
@@ -38,6 +38,32 @@ public function fields(Request $request)
 }
 ```
 
-## Contributing
+## Difference with Nova's own markdown
 
-I'm open to pullrequests and aim to maintain this package for the time being.
+Nova, ofcourse, offers it's own markdown field. They are similar. Both of them offer inline text highlighting of markdown text. Both of them perform no transformations on the input and simply store it as plain text, usually in a TEXT column. 
+
+This package however will add some more highlighting and toolbar buttons that are not included the default Markdown field:
+
+| Functionality | Default Markdown | Nova Markdown |
+| --- | --- | --- |
+| Strong  | V | V |
+| Italic | V | V |
+| External image | V | V |
+| Link | V | V |
+| Preview | V | V |
+| Headings | - | V |
+| Blockquotes | - | V |
+| Ordered lists | - | V |
+| Unordered lists | - | V |
+| Side-by-side view | - | V |
+
+## Further development and contributions
+
+At some point I would like to add image handling. Don't hold your breath though, the package currently does what I need it to do. I'm open to pullrequests and aim to ensure this package keeps working as-is with upcoming Nova releases.
+
+Shoutout to [@palauaandsons](https://github.com/palauaandsons/nova-simplemde-field/) for his work that I improved upon and simplified where I needed.
+
+## Todo
+
+- [ ] Write tests
+- [ ] Image uploading / handling
