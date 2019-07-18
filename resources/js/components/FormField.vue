@@ -41,6 +41,7 @@ export default {
 
   mounted() {
     this.simplemde = new SimpleMDE({
+      element: document.getElementById(this.field.name),
       spellChecker: false,
       hideIcons: ["image"],
     });
