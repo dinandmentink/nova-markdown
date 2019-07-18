@@ -44,6 +44,7 @@ export default {
       element: document.getElementById(this.field.name),
       spellChecker: false,
       hideIcons: ["image"],
+      showIcons: ["table"],
     });
 
     if (this.field.value) {
