@@ -1,1 +1,13 @@
-// Nova Tool CSS
+// ckeditor overrides to be consistent with laravel nova styling
+//
+// Works both with default nova and
+// https://github.com/gregoriohc/laravel-nova-theme-responsive
+
+.CodeMirror,
+.editor-preview-side {
+  z-index: 51 !important;
+}
+
+.editor-toolbar.fullscreen {
+  z-index: 1001 !important;
+}
