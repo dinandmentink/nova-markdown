@@ -12,4 +12,13 @@ class Markdown extends Field
      * @var string
      */
     public $component = 'markdown';
+
+    /**
+     * Indicates if the element should be shown on the index view.
+     *
+     * We set this to false by default.
+     *
+     * @var \Closure|bool
+     */
+    public $showOnIndex = false;
 }
