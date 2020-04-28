@@ -24,9 +24,9 @@
 </template>
 
 <script>
-import SimpleMDE from "simplemde";
+import easyMDE from "easymde";
 import { FormField, HandlesValidationErrors } from "laravel-nova";
-require("simplemde/dist/simplemde.min.css");
+require("easymde/dist/easymde.min.css");
 
 export default {
   mixins: [FormField, HandlesValidationErrors],
@@ -35,12 +35,12 @@ export default {
 
   data() {
     return {
-      simplemde: null,
+      easymde: null,
     };
   },
 
   mounted() {
-    this.simplemde = new SimpleMDE({
+    this.easymde = new easyMDE({
       element: document.getElementById(this.field.name),
       spellChecker: false,
       hideIcons: ["image"],
@@ -48,11 +48,11 @@ export default {
     });
 
     if (this.field.value) {
-      this.simplemde.value(this.field.value);
+      this.easymde.value(this.field.value);
     }
 
-    this.simplemde.codemirror.on("change", (cm, changeObj) => {
-      this.value = this.simplemde.value();
+    this.easymde.codemirror.on("change", (cm, changeObj) => {
+      this.value = this.easymde.value();
     });
   },
 
