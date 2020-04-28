@@ -1,6 +1,6 @@
 # Nova Markdown
 
-Adds a markdown editor component to Laravel Nova. Based on [simplemde](https://simplemde.com/). 
+Adds a markdown editor component to Laravel Nova. Based on [easymde](https://easymde.tk). 
 
 ![nova markdown screenshot](nova-markdown.png "Nova Markdown in Action")
 
