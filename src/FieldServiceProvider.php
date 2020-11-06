@@ -19,6 +19,16 @@ class FieldServiceProvider extends ServiceProvider
             Nova::script('markdown', __DIR__.'/../dist/js/field.js');
             Nova::style('markdown', __DIR__.'/../dist/css/field.css');
         });
+
+        $this->publishes([
+            __DIR__.'/config/nova-markdown.php' =>
+                config_path('nova-markdown.php'),
+        ]);
+
+        $this->mergeConfigFrom(
+            __DIR__.'/config/nova-markdown.php',
+            'nova-markdown'
+        );
     }
 
     /**
