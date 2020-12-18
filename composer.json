@@ -5,8 +5,18 @@
         "laravel",
         "nova",
         "field",
-        "markdown"
+        "markdown",
+        "image upload"
     ],
+    "authors": [
+        {
+            "name": "Dinand Mentink",
+            "email": "dinand@dcreative.nl",
+            "homepage": "https://www.dcreative.nl",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/dinandmentink/nova-markdown",
     "license": "MIT",
     "require": {
         "php": ">=7.4",
