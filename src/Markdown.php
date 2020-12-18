@@ -56,17 +56,6 @@ class Markdown extends Field
         return $this;
     }
 
-    /**
-     * Set the maximum image size, in kilobytes, for this field.
-     */
-
-    public function maxSize($maxSize)
-    {
-        return $this->withMeta([
-            "maxSize" => $maxSize,
-        ]);
-    }
-
     private function setDefaultMeta()
     {
         if(config("nova-markdown.uploads")) {
