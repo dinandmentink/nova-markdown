@@ -59,4 +59,11 @@ return [
 
     'quality' => env("NOVA_MARKDOWN_QUALITY", 85),
 
+    /**
+     * Define the middleware stack to be used by nova-markdown routes.
+     * A sensible default has been set.
+     */
+
+    'middleware' => config("nova.middleware"),
+
 ];
