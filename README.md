@@ -65,6 +65,79 @@ Image upload should just work™. Nova Markdown aims to support image uploads on
 - Nova Markdown uses [spatie/image](https://github.com/spatie/image) for compressing and resizing images. Image requires the php [exif extension](http://php.net/manual/en/exif.installation.php) to be enabled.
 - Nova Markdown registers a route and a controller in the same middleware configured in `nova.middleware`. This assumes an authenticated user that may access Nova may also post images Nova Markdown's image upload route.
 
+## Config
+Config mainly deals with image uploads. Sensible defaults are provided, but Nova Markdown aims to be configurable either through `config/nova-markdown.php` or env variables.  
+
+For full information please see the [default config](src/config/nova-markdown.php), which can be published:
+
+```bash
+php artisan vendor:publish --provider="DinandMentink\Markdown\FieldServiceProvider"
+```
+
+This will create a `config/nova-markdown.php` file in your app that you can modify to set your configuration. Please make sure you check for changes to the original config file in this package between releases. The following are some of the most usefull config items.
+
+**Enable uploads**
+
+Config key: `uploads`  
+ENV: `NOVA_MARKDOWN_UPLOADS`  
+Default: `true`
+
+Setting this to `false` will disable image uploads completely.
+
+**Enable uploads by default** 
+
+Config key: `uploads-default-enabled`  
+ENV: `NOVA_MARKDOWN_UPLOADS_DEFAULT_ENABLED`  
+Default: `true`
+
+Will enable uploads by default (to be enabled on a per-field basis). Has no effect when uploads are disabled entirely. 
+
+**Set disk**
+
+Config key: `disk`  
+ENV: `NOVA_MARKDOWN_DISK`  
+Default: `public`
+
+Set the disk where uploads are stored. Must be configured in `filesystems.php`.
+
+**Directory**
+
+Config key: `directory`  
+ENV: `NOVA_MARKDOWN_DIRECTORY`  
+Default: `uploads`
+
+Set the directory where images are uploaded. Alternatively, it's possible to configure a function, which takes the uploading $user as argument and can be used to group files by user. Example:
+
+```php
+function($user) { 
+    return "uploads/" . \Str::slug($user->name); 
+}
+```
+
+**Maximum upload size**
+
+Config key: `max-size`  
+ENV: `NOVA_MARKDOWN_MAX_SIZE`  
+Default: `8 * 1024`
+
+The maximum size for uploaded images in kilobytes.
+
+**Maximum upload size**
+
+Config key: `max-width`  
+ENV: `NOVA_MARKDOWN_MAX_WIDTH`  
+Default: `1920`
+
+The maximum width for uploaded images in pixels. Uploaded images will be scaled down to this width. Use null to disable image scaling.
+
+**Image Quality**
+
+Config key: `quality`  
+ENV: `NOVA_MARKDOWN_QUALITY`  
+Default: `85`
+
+Uploaded images will be converted to this quality. Integer between 0 and 100. Use null to disable quality adjustments.
+
 ## Difference with Nova's own markdown
 
 Nova, ofcourse, offers it's own [markdown field](https://nova.laravel.com/docs/1.0/resources/fields.html#markdown-field). Nova's official markdown and this, Nova Markdown, are similar. Both of them offer inline text highlighting of markdown text. Both of them perform no transformations on the input and simply store it as plain text, usually in a TEXT column. 
