@@ -10,7 +10,7 @@ Require `dinandmentink/nova-markdown` using composer:
 composer require dinandmentink/nova-markdown
 ```
 
-The package will register itself using Laravels package autodiscovery. Now, whenever you want to use a Markdown field use `Markdown::make` like you would expect in the `fields()` method of a Nova resource.
+The package will register itself using Laravels' package autodiscovery. Now, whenever you want to use a Markdown field use `Markdown::make` like you would expect in the `fields()` method of a Nova resource.
 
 ```php
 use DinandMentink\Markdown\Markdown;
