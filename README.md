@@ -38,30 +38,29 @@ public function fields(Request $request)
 
 ## Difference with Nova's own markdown
 
-Nova, ofcourse, offers it's own markdown field. They are similar. Both of them offer inline text highlighting of markdown text. Both of them perform no transformations on the input and simply store it as plain text, usually in a TEXT column. 
+Nova, ofcourse, offers it's own [markdown field](https://nova.laravel.com/docs/1.0/resources/fields.html#markdown-field). Nova's official markdown and this, Nova Markdown, are similar. Both of them offer inline text highlighting of markdown text. Both of them perform no transformations on the input and simply store it as plain text, usually in a TEXT column. 
 
-This package however will add some more highlighting and toolbar buttons that are not included the default Markdown field:
+This package however will add some more highlighting and toolbar buttons that are not included the default Markdown field. But mainly, **Nova Markdown handles image uploads**. 
 
 | Functionality | Default Markdown | Nova Markdown |
 | --- | --- | --- |
-| Strong  | V | V |
+| Strong | V | V |
 | Italic | V | V |
 | External image | V | V |
 | Link | V | V |
 | Preview | V | V |
+| Inline image upload | - | V |
 | Headings | - | V |
 | Blockquotes | - | V |
 | Ordered lists | - | V |
 | Unordered lists | - | V |
 | Side-by-side view | - | V |
 
-## Further development and contributions
+## Credits
 
-At some point I would like to add image handling. Don't hold your breath though, the package currently does what I need it to do. I'm open to pullrequests and aim to ensure this package keeps working as-is with upcoming Nova releases.
-
-Shoutout to [@palauaandsons](https://github.com/palauaandsons/nova-simplemde-field/) for his work that I improved upon and simplified where I needed.
+- Dinand Mentink - dinand@dcreative.nl
+- First version based on [@palauaandsons](https://github.com/palauaandsons/nova-simplemde-field/)
 
 ## Todo
 
 - [ ] Write tests
-- [ ] Image uploading / handling
