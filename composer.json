@@ -20,7 +20,8 @@
     "license": "MIT",
     "require": {
         "php": ">=7.4",
-        "illuminate/support": "^8.13"
+        "illuminate/support": "^8.13",
+        "spatie/image": "^1.4.0"
     },
     "autoload": {
         "psr-4": {
