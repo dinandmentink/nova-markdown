@@ -9,7 +9,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": ">=7.1.0",
+        "php": ">=7.4",
         "illuminate/support": "^8.13"
     },
     "autoload": {
