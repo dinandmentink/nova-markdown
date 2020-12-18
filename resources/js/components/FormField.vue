@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import $ from "jquery";
 import easyMDE from "easymde";
 import { FormField, HandlesValidationErrors } from "laravel-nova";
 require("easymde/dist/easymde.min.css");
@@ -40,11 +41,66 @@ export default {
   },
 
   mounted() {
+    function renameFile(originalFile, newName) {
+      return new File([originalFile], newName, {
+        type: originalFile.type,
+        lastModified: originalFile.lastModified,
+      });
+    }
+
+    var csrfToken = document.querySelector('meta[name="csrf-token"]').content;
+    var imageUpload = this.field.uploads;
+    var imageUploadEndpoint = this.field.uploadEndpoint;
+    var maxSize = this.field.maxSize * 1024;
+
+    var errorMessages = {
+      noFileGiven: "You must select a file.",
+      typeNotAllowed: "This image type is not allowed.",
+      fileTooLarge:
+        "Image #image_name# is too big (#image_size#). Maximum file size is " +
+        maxSize / 1024 +
+        "kb.",
+      importError:
+        "Something went wrong when uploading the image #image_name#.",
+    };
+
     this.easymde = new easyMDE({
       element: document.getElementById(this.field.name),
       spellChecker: false,
       hideIcons: ["image"],
       showIcons: ["table"],
+      uploadImage: imageUpload,
+      imageUploadFunction: function (file, onSuccess, onError) {
+        if (file.size > maxSize) {
+          return onError(errorMessages.fileTooLarge);
+        }
+
+        // File is copy/pasted, rename it
+        if (file.name == "image.png") {
+          file = renameFile(file, new Date().toISOString() + ".png");
+        }
+
+        var formData = new FormData();
+        formData.append("_token", csrfToken);
+        formData.append("image", file);
+
+        $.ajax(imageUploadEndpoint, {
+          data: formData,
+          type: "POST",
+          contentType: false,
+          processData: false,
+        })
+          .done(function (data) {
+            if (data && data.url) {
+              return onSuccess(data.url);
+            } else {
+              return onError(errorMessages.importError);
+            }
+          })
+          .fail(function (data) {
+            return onError(errorMessages.importError);
+          });
+      },
     });
 
     if (this.field.value) {
