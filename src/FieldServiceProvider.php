@@ -5,6 +5,7 @@ namespace DinandMentink\Markdown;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Events\ServingNova;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Gate;
 
 class FieldServiceProvider extends ServiceProvider
 {
@@ -15,10 +16,10 @@ class FieldServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Nova::serving(function (ServingNova $event) {
-            Nova::script('markdown', __DIR__.'/../dist/js/field.js');
-            Nova::style('markdown', __DIR__.'/../dist/css/field.css');
-        });
+        $this->publishResources();
+        $this->serveAssets();
+        $this->declareConfig();
+        $this->loadRoutes();
     }
 
     /**
@@ -29,5 +30,37 @@ class FieldServiceProvider extends ServiceProvider
     public function register()
     {
         //
+    }
+
+    private function publishResources()
+    {
+        $this->publishes(
+            [
+                __DIR__.'/config/nova-markdown.php' =>
+                    config_path('nova-markdown.php'),
+            ],
+            "config"
+        );
+    }
+
+    private function serveAssets()
+    {
+        Nova::serving(function (ServingNova $event) {
+            Nova::script('markdown', __DIR__.'/../dist/js/field.js');
+            Nova::style('markdown', __DIR__.'/../dist/css/field.css');
+        });
+    }
+
+    private function declareConfig()
+    {
+        $this->mergeConfigFrom(
+            __DIR__.'/config/nova-markdown.php',
+            'nova-markdown'
+        );
+    }
+
+    private function loadRoutes()
+    {
+        $this->loadRoutesFrom(__DIR__.'/routes.php');
     }
 }

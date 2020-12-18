@@ -20,6 +20,7 @@
         "vue-template-compiler": "^2.6"
     },
     "dependencies": {
+        "jquery": "^3.5.1",
         "vue": "^2.6"
     }
 }

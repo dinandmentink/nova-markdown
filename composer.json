@@ -1,10 +1,16 @@
 {
     "name": "dinandmentink/nova-markdown",
     "description": "A Laravel Nova Markdown Field.",
-    "keywords": ["laravel", "nova", "field", "markdown"],
+    "keywords": [
+        "laravel",
+        "nova",
+        "field",
+        "markdown"
+    ],
     "license": "MIT",
     "require": {
-        "php": ">=7.1.0"
+        "php": ">=7.1.0",
+        "illuminate/support": "^8.13"
     },
     "autoload": {
         "psr-4": {
@@ -13,7 +19,9 @@
     },
     "extra": {
         "laravel": {
-            "providers": ["DinandMentink\\Markdown\\FieldServiceProvider"]
+            "providers": [
+                "DinandMentink\\Markdown\\FieldServiceProvider"
+            ]
         }
     },
     "config": {
