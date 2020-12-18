@@ -156,6 +156,9 @@ Contributors:
 - [Dinand Mentink](https://github.com/dinandmentink)
 - First version based on [@palauaandsons](https://github.com/palauaandsons/nova-simplemde-field/)
 
+## Rendering markdown
+Nova Markdown will add a markdown editor which you can add to fields in Nova. It does not render the markdown outside Nova. For rendering the markdown in Laravel views I recommend either [Laravel Markdown](https://github.com/GrahamCampbell/Laravel-Markdown) or [commonmark](https://github.com/thephpleague/commonmark).
+
 ## Difference with Nova's own markdown
 
 Nova, ofcourse, offers it's own [markdown field](https://nova.laravel.com/docs/1.0/resources/fields.html#markdown-field). Nova's official markdown and this, Nova Markdown, are similar. Both of them offer inline text highlighting of markdown text. Both of them perform no transformations on the input and simply store it as plain text, usually in a TEXT column. 
