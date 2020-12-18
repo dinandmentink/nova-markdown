@@ -3,6 +3,7 @@
 namespace DinandMentink\Markdown\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Auth;
 use DinandMentink\Markdown\Http\Requests\UploadStoreRequest;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
@@ -24,7 +25,11 @@ class UploadController extends Controller
 
     private function directory(): String
     {
-        return config("nova-markdown.directory");
+        if(is_string(config("nova-markdown.directory"))) {
+            return config("nova-markdown.directory");
+        }
+
+        return config("nova-markdown.directory")(Auth::user());
     }
 
     private function disk(): String

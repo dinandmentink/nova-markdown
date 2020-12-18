@@ -33,10 +33,18 @@ return [
     'disk' => env("NOVA_MARKDOWN_DISK", 'public'),
 
     /**
-     * The directory where to place uploaded images within the disk
+     * The directory where to place uploaded images within the disk.
+     *
+     * Can be a string with the directoryname. Alternatively, it's possible
+     * to configure a function, which takes the uploading $user as argument and
+     * returns the directory. This can be used to group uploads in a folder
+     * by user.
+     *
+     * Example:
+     * function($user) { return "uploads/" . \Str::slug($user->name); }
      */
 
-    'directory' => env("NOVA_MARKDOWN_DIRECTORY", 'uploads'),
+    'directory' => env("NOVA_MARKDOWN_DIRECTORY", "uploads"),
 
     /**
      * The maximum size for uploaded images in kilobytes
