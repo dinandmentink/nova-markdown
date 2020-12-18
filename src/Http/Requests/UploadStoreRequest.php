@@ -2,7 +2,6 @@
 
 namespace DinandMentink\Markdown\Http\Requests;
 
-use Gate;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UploadStoreRequest extends FormRequest
