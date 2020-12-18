@@ -62,6 +62,9 @@ This package however will add some more highlighting and toolbar buttons that ar
 | Unordered lists | - | V |
 | Side-by-side view | - | V |
 
+## Security
+If you discover any security related issues, please email [dinand@dcreative.nl](mailto:dinand@dcreative.nl) instead of using the issue tracker.
+
 ## Credits
 
 - Dinand Mentink - dinand@dcreative.nl
