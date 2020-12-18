@@ -7,6 +7,7 @@
 ![Forks](https://img.shields.io/github/forks/dinandmentink/nova-markdown.svg?style=flat-square)
 ![Stars](https://img.shields.io/github/stars/dinandmentink/nova-markdown.svg?style=flat-square)
 ![MIT license](https://img.shields.io/github/license/dinandmentink/nova-markdown.svg?style=flat-square)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg?style=flat-square)](https://paypal.me/dinandmentink)
 
 Adds a markdown editor component to Laravel Nova. Based on [easymde](https://easymde.tk). 
 
@@ -147,6 +148,8 @@ If you discover any security related issues, please email [dinand@dcreative.nl](
 ![Dcreative Open Source](/images/dcreative-open-source.svg)
 
 This project is proudly created and maintained by [Dcreative](https://www.dcreative.nl). Dcreative is a tiny webdevelopmment agency in the Netherlands. 
+
+I have benefited a lot from PHP, Laravel, and countless other open source projects. Nova Markdown is my small contribution in return. Has Nova Markdown been useful to you? Feel free to drop me a [thank-you note](mailto:dinand@dcreative.nl) or [donate a beer](https://paypal.me/dinandmentink). Regardless, I'm happy to provide Nova Markdown.
 
 Contributors:
 
