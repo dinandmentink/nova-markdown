@@ -29,6 +29,8 @@ class FieldServiceProvider extends ServiceProvider
             __DIR__.'/config/nova-markdown.php',
             'nova-markdown'
         );
+
+        $this->loadRoutesFrom(__DIR__.'/routes.php');
     }
 
     /**
