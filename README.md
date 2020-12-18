@@ -2,8 +2,6 @@
 
 Adds a markdown editor component to Laravel Nova. Based on [easymde](https://easymde.tk). 
 
-![nova markdown screenshot](nova-markdown.png "Nova Markdown in Action")
-
 ## Installation instructions
 
 Require `dinandmentink/nova-markdown` using composer:
