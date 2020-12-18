@@ -1,5 +1,11 @@
 # Nova Markdown
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/dinandmentink/nova-markdown.svg?style=flat-square)](https://packagist.org/packages/dinandmentink/nova-markdown)
+[![Total Downloads](https://img.shields.io/packagist/dt/dinandmentink/nova-markdown.svg?style=flat-square)](https://packagist.org/packages/dinandmentink/nova-markdown)
+![Forks](https://img.shields.io/github/forks/dinandmentink/nova-markdown.svg?style=flat-square)
+![Stars](https://img.shields.io/github/stars/dinandmentink/nova-markdown.svg?style=flat-square)
+![MIT license](https://img.shields.io/github/license/dinandmentink/nova-markdown.svg?style=flat-square)
+
 Adds a markdown editor component to Laravel Nova. Based on [easymde](https://easymde.tk). 
 
 ## Installation instructions
