@@ -36,11 +36,9 @@ class Markdown extends Field
     ) {
         parent::__construct($name, $attribute);
 
-        return $this->withMeta([
-            "uploads" => config("nova-markdown.uploads"),
-            "uploadEndpoint" => route("nova-markdown.uploads.store"),
-            "maxSize" => config("nova-markdown.max-size"),
-        ]);
+        $this->setDefaultMeta();
+
+        return $this;
     }
 
     /**
@@ -49,9 +47,13 @@ class Markdown extends Field
 
     public function uploads(bool $enabled)
     {
-        return $this->withMeta([
-            "uploads" => $enabled,
-        ]);
+        if(config("nova-markdown.uploads")) {
+            $this->withMeta([
+                "uploads" => $enabled,
+            ]);
+        }
+
+        return $this;
     }
 
     /**
@@ -63,5 +65,21 @@ class Markdown extends Field
         return $this->withMeta([
             "maxSize" => $maxSize,
         ]);
+    }
+
+    private function setDefaultMeta()
+    {
+        if(config("nova-markdown.uploads")) {
+            $this->withMeta([
+                "uploadEndpoint" => route("nova-markdown.uploads.store"),
+                "maxSize" => config("nova-markdown.max-size"),
+            ]);
+        }
+
+        if(config("nova-markdown.uploads-default-enabled")) {
+            $this->withMeta([
+                "uploads" => config("nova-markdown.uploads"),
+            ]);
+        }
     }
 }

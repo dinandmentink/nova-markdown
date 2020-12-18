@@ -7,10 +7,17 @@
 return [
 
     /**
-     * Enable or disable uploads
+     * Enable or disable uploads entirely
      */
 
     'uploads' => env("NOVA_MARKDOWN_UPLOADS", true),
+
+    /**
+     * Enable uploads by default.
+     * Note, this has no effect up uploads are disabled entirely.
+     */
+
+    'uploads-default-enabled' => env("NOVA_MARKDOWN_UPLOADS_DEFAULT_ENABLED", true),
 
     /**
      * The path prefix that will be used by nova-markdown routes
@@ -47,7 +54,7 @@ return [
 
     /**
      * Uploaded images will be converted to this quality.
-     * Integer between 0 and 100. null for no quality adjustments.
+     * Integer between 0 and 100. Use null to disable quality adjustments.
      */
 
     'quality' => env("NOVA_MARKDOWN_QUALITY", 85),
