@@ -45,7 +45,7 @@ class Markdown extends Field
      * Enable or disable uploads on this field.
      */
 
-    public function uploads(bool $enabled)
+    public function uploads(bool $enabled = true)
     {
         if(config("nova-markdown.uploads")) {
             $this->withMeta([
