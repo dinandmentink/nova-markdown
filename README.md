@@ -1,3 +1,5 @@
+![Nova Markdown](/images/banner.svg)
+
 # Nova Markdown
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/dinandmentink/nova-markdown.svg?style=flat-square)](https://packagist.org/packages/dinandmentink/nova-markdown)
