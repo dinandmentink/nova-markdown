@@ -9,7 +9,9 @@
 ![MIT license](https://img.shields.io/github/license/dinandmentink/nova-markdown.svg?style=flat-square)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg?style=flat-square)](https://paypal.me/dinandmentink)
 
-Adds a markdown editor component to Laravel Nova. Based on [easymde](https://easymde.tk). 
+Add a markdown editor component to Laravel Nova. Based on [easymde](https://easymde.tk), Nova Markdown supports highlighting, some useful buttons and inline image uploads. It's simple, configurable, and it just works™.
+
+![Nova Markdown](/images/nova-markdown.gif)
 
 ## Installation instructions
 
