@@ -1,7 +1,6 @@
 ![Nova Markdown](/images/banner.svg)
 
 # Nova Markdown
-
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/dinandmentink/nova-markdown.svg?style=flat-square)](https://packagist.org/packages/dinandmentink/nova-markdown)
 [![Total Downloads](https://img.shields.io/packagist/dt/dinandmentink/nova-markdown.svg?style=flat-square)](https://packagist.org/packages/dinandmentink/nova-markdown)
 ![Forks](https://img.shields.io/github/forks/dinandmentink/nova-markdown.svg?style=flat-square)
@@ -9,12 +8,11 @@
 ![MIT license](https://img.shields.io/github/license/dinandmentink/nova-markdown.svg?style=flat-square)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg?style=flat-square)](https://paypal.me/dinandmentink)
 
-Add a markdown editor component to Laravel Nova. Based on [easymde](https://easymde.tk), Nova Markdown supports highlighting, some useful buttons and inline image uploads. It's simple, configurable, and it just works™.
+Add a markdown editor field to Laravel Nova. Based on [easymde](https://easymde.tk), Nova Markdown supports highlighting, some useful buttons and inline image uploads. It's simple, configurable, and it just works™.
 
 ![Nova Markdown](/images/nova-markdown.gif)
 
 ## Installation instructions
-
 Require `dinandmentink/nova-markdown` using composer:
 
 ```bash
@@ -68,12 +66,12 @@ Image upload should just work™. Nova Markdown aims to support image uploads on
 
 - A disk named `public` is assumed to be configured in `filesystems.php`.
 - Nova Markdown uses [spatie/image](https://github.com/spatie/image) for compressing and resizing images. Image requires the php [exif extension](http://php.net/manual/en/exif.installation.php) to be enabled.
-- Nova Markdown registers a route and a controller in the same middleware configured in `nova.middleware`. This assumes an authenticated user that may access Nova may also post images Nova Markdown's image upload route.
+- Nova Markdown registers a route and a controller in the same middleware configured in `nova.middleware`. This assumes an authenticated user that may access Nova may also upload images through Nova Markdown's image upload route.
 
 ## Config
-Config mainly deals with image uploads. Sensible defaults are provided, but Nova Markdown aims to be configurable either through `config/nova-markdown.php` or env variables.  
+Config mainly deals with image uploads. Sensible defaults are provided, but Nova Markdown aims to be fully configurable either through `config/nova-markdown.php` or env variables.  
 
-For full information please see the [default config](src/config/nova-markdown.php), which can be published:
+For all configuration options please see the [default config](src/config/nova-markdown.php), which can be published:
 
 ```bash
 php artisan vendor:publish --provider="DinandMentink\Markdown\FieldServiceProvider"
@@ -159,11 +157,10 @@ Contributors:
 - First version based on [@palauaandsons](https://github.com/palauaandsons/nova-simplemde-field/)
 
 ## Rendering markdown
-Nova Markdown will add a markdown editor which you can add to fields in Nova. It does not render the markdown outside Nova. For rendering the markdown in Laravel views I recommend either [Laravel Markdown](https://github.com/GrahamCampbell/Laravel-Markdown) or [commonmark](https://github.com/thephpleague/commonmark).
+Nova Markdown will add a markdown editor field to Nova. It does not render markdown outside Nova. For rendering the markdown in Laravel views I recommend having a look at [Laravel Markdown](https://github.com/GrahamCampbell/Laravel-Markdown) or [commonmark](https://github.com/thephpleague/commonmark).
 
 ## Difference with Nova's own markdown
-
-Nova, ofcourse, offers it's own [markdown field](https://nova.laravel.com/docs/1.0/resources/fields.html#markdown-field). Nova's official markdown and this, Nova Markdown, are similar. Both of them offer inline text highlighting of markdown text. Both of them perform no transformations on the input and simply store it as plain text, usually in a TEXT column. 
+Nova, ofcourse, offers it's own [markdown field](https://nova.laravel.com/docs/1.0/resources/fields.html#markdown-field). Nova's official markdown and this, Nova Markdown, are similar. Both of them offer inline text highlighting of markdown text. Neither of them perform transformations on the input and simply store it as plain text, usually in a TEXT column. 
 
 This package however will add some more highlighting and toolbar buttons that are not included the default Markdown field. But mainly, **Nova Markdown handles image uploads**. 
 
