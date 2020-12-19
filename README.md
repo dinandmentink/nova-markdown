@@ -140,6 +140,19 @@ Default: `85`
 
 Uploaded images will be converted to this quality. Integer between 0 and 100. Use null to disable quality adjustments.
 
+## Security
+If you discover any security related issues, please email [dinand@dcreative.nl](mailto:dinand@dcreative.nl) instead of using the issue tracker.
+
+## Credits
+![Dcreative Open Source](/images/dcreative-open-source.svg)
+
+This project is proudly created and maintained by [Dcreative](https://www.dcreative.nl). Dcreative is a tiny webdevelopmment agency in the Netherlands. 
+
+Contributors:
+
+- [Dinand Mentink](https://github.com/dinandmentink)
+- First version based on [@palauaandsons](https://github.com/palauaandsons/nova-simplemde-field/)
+
 ## Difference with Nova's own markdown
 
 Nova, ofcourse, offers it's own [markdown field](https://nova.laravel.com/docs/1.0/resources/fields.html#markdown-field). Nova's official markdown and this, Nova Markdown, are similar. Both of them offer inline text highlighting of markdown text. Both of them perform no transformations on the input and simply store it as plain text, usually in a TEXT column. 
@@ -159,14 +172,6 @@ This package however will add some more highlighting and toolbar buttons that ar
 | Ordered lists | - | V |
 | Unordered lists | - | V |
 | Side-by-side view | - | V |
-
-## Security
-If you discover any security related issues, please email [dinand@dcreative.nl](mailto:dinand@dcreative.nl) instead of using the issue tracker.
-
-## Credits
-
-- Dinand Mentink - dinand@dcreative.nl
-- First version based on [@palauaandsons](https://github.com/palauaandsons/nova-simplemde-field/)
 
 ## Todo
 
