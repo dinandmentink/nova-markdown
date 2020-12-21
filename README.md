@@ -1,4 +1,4 @@
-![Nova Markdown](/images/banner.svg)
+![Nova Markdown](images/banner.svg)
 
 # Nova Markdown
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/dinandmentink/nova-markdown.svg?style=flat-square)](https://packagist.org/packages/dinandmentink/nova-markdown)
@@ -10,7 +10,7 @@
 
 Add a markdown editor field to Laravel Nova. Based on [easymde](https://easymde.tk), Nova Markdown supports highlighting, some useful buttons and inline image uploads. It's simple, configurable, and it just works™.
 
-![Nova Markdown](/images/nova-markdown.gif)
+![Nova Markdown](images/nova-markdown.gif)
 
 ## Installation instructions
 Require `dinandmentink/nova-markdown` using composer:
@@ -145,7 +145,7 @@ Uploaded images will be converted to this quality. Integer between 0 and 100. Us
 If you discover any security related issues, please email [dinand@dcreative.nl](mailto:dinand@dcreative.nl) instead of using the issue tracker.
 
 ## Credits
-![Dcreative Open Source](/images/dcreative-open-source.svg)
+![Dcreative Open Source](images/dcreative-open-source.svg)
 
 This project is proudly created and maintained by [Dcreative](https://www.dcreative.nl). Dcreative is a tiny webdevelopmment agency in the Netherlands. 
 
