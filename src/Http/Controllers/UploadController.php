@@ -104,7 +104,7 @@ class UploadController extends Controller
         $pathinfo = pathinfo($path);
 
         return
-            Str::slug($pathinfo["filename"]) .
+            Str::slug(config("nova-markdown.random_filename") ? Str::random(32) : $pathinfo["filename"]) .
             "." .
             $pathinfo["extension"];
     }

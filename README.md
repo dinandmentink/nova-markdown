@@ -141,6 +141,14 @@ Default: `85`
 
 Uploaded images will be converted to this quality. Integer between 0 and 100. Use null to disable quality adjustments.
 
+**Random Filename**
+
+Config key: `random_filename`  
+ENV: `NOVA_MARKDOWN_RANDOM_FILENAME`  
+Default: `false`
+
+Uploaded images will be stored by default using a slug version of its original filename. You can set this to true to use a random filename instead.
+
 ## Security
 If you discover any security related issues, please email [dinand@dcreative.nl](mailto:dinand@dcreative.nl) instead of using the issue tracker.
 
