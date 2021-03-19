@@ -75,8 +75,8 @@ return [
     'middleware' => config("nova.middleware"),
 
     /**
-     * Uploaded images will be stored by default using a slug version of its original filename.
-     * But you can set this to true to use of a random filename.
+     * Uploaded images will be stored by default using a slug version of its
+     * original filename. You can set this to true to use a random filename.
      */
 
     'random_filename' => env("NOVA_MARKDOWN_RANDOM_FILENAME", false),
