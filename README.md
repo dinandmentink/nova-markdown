@@ -125,7 +125,7 @@ Default: `8 * 1024`
 
 The maximum size for uploaded images in kilobytes.
 
-**Maximum upload size**
+**Maximum upload width**
 
 Config key: `max-width`  
 ENV: `NOVA_MARKDOWN_MAX_WIDTH`  
@@ -139,7 +139,7 @@ Config key: `quality`
 ENV: `NOVA_MARKDOWN_QUALITY`  
 Default: `85`
 
-Uploaded images will be converted to this quality. Integer between 0 and 100. Use null to disable quality adjustments.
+Uploaded images will be converted to this quality. Integer between 0 and 100. Use `null` to disable quality adjustments.
 
 **Random Filename**
 
