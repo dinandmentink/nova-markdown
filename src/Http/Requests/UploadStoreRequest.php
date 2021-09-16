@@ -30,11 +30,11 @@ class UploadStoreRequest extends FormRequest
                 "max:" . config("nova-markdown.max-size"),
             ],
             "resourceName" => [
-                "required",
+                "nullable",
                 "string",
             ],
             "resourceId" => [
-                "required",
+                "nullable",
             ],
         ];
     }
