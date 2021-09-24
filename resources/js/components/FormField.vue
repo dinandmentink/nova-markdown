@@ -64,6 +64,8 @@ export default {
         "Something went wrong when uploading the image #image_name#.",
     };
 
+    const { resourceName, resourceId } = this;
+
     this.easymde = new easyMDE({
       element: document.getElementById(this.field.name),
       spellChecker: false,
@@ -82,6 +84,8 @@ export default {
 
         var formData = new FormData();
         formData.append("_token", csrfToken);
+        formData.append("resourceName", resourceName);
+        formData.append("resourceId", resourceId);
         formData.append("image", file);
 
         $.ajax(imageUploadEndpoint, {
