@@ -152,18 +152,6 @@ Uploaded images will be stored by default using a slug version of its original f
 ## Security
 If you discover any security related issues, please email [dinand@dcreative.nl](mailto:dinand@dcreative.nl) instead of using the issue tracker.
 
-## Credits
-![Dcreative Open Source](images/dcreative-open-source.svg)
-
-This project is proudly created and maintained by [Dcreative](https://www.dcreative.nl). Dcreative is a tiny webdevelopmment agency in the Netherlands. 
-
-I have benefited a lot from PHP, Laravel, and countless other open source projects. Nova Markdown is my small contribution in return. Has Nova Markdown been useful to you? Feel free to drop me a [thank-you note](mailto:dinand@dcreative.nl) or [donate a beer](https://paypal.me/dinandmentink). Regardless, I'm happy to provide Nova Markdown.
-
-Contributors:
-
-- [Dinand Mentink](https://github.com/dinandmentink)
-- First version based on [@palauaandsons](https://github.com/palauaandsons/nova-simplemde-field/)
-
 ## Rendering markdown
 Nova Markdown will add a markdown editor field to Nova. It does not render markdown outside Nova. For rendering the markdown in Laravel views I recommend having a look at [Laravel Markdown](https://github.com/GrahamCampbell/Laravel-Markdown) or [commonmark](https://github.com/thephpleague/commonmark).
 
@@ -189,3 +177,12 @@ This package however will add some more highlighting and toolbar buttons that ar
 ## Todo
 
 - [ ] Write tests
+
+## Credits
+![Dcreative Open Source](images/dcreative-open-source.svg)
+
+This project is proudly created and maintained by [Dcreative](https://www.dcreative.nl). Dcreative is a tiny webdevelopmment agency in the Netherlands. 
+
+I have benefited a lot from PHP, Laravel, and countless other open source projects. Nova Markdown is my small contribution in return. Has Nova Markdown been useful to you? Feel free to drop me a [thank-you note](mailto:dinand@dcreative.nl) or [donate a beer](https://paypal.me/dinandmentink). Regardless, I'm happy to provide Nova Markdown.
+
+*First version based on [@palauaandsons](https://github.com/palauaandsons/nova-simplemde-field/)*
