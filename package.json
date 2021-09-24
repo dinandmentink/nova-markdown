@@ -12,10 +12,11 @@
     "easymde": "^2.10",
     "laravel-mix": "^6.0",
     "laravel-nova": "^1.2",
+    "markdown-it": "^12.2.0",
     "postcss": "^8.1",
     "resolve-url-loader": "^4.0",
     "sass": "^1.30",
-    "sass-loader": "^11.0",
+    "sass-loader": "^12.0",
     "vue-loader": "^15.9.5",
     "vue-template-compiler": "^2.6"
   },
