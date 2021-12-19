@@ -2,7 +2,7 @@
   <default-field :field="field" :full-width-content="true">
     <template slot="field">
       <textarea
-        :id="field.name"
+        ref="mirroredTextArea"
         class="w-full form-control form-input form-input-bordered"
         :class="errorClasses"
         :placeholder="field.name"
@@ -60,7 +60,7 @@ export default {
     const { resourceName, resourceId } = this;
 
     this.easymde = new easyMDE({
-      element: document.getElementById(this.field.name),
+      element: this.$refs.mirroredTextArea,
       spellChecker: false,
       hideIcons: ["image"],
       showIcons: ["table"],
