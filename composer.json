@@ -21,7 +21,7 @@
     "require": {
         "php": ">=7.4",
         "illuminate/support": "^9.0",
-        "spatie/image": "^1.4.0"
+        "spatie/image": "^2.0"
     },
     "autoload": {
         "psr-4": {
