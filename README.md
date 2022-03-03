@@ -45,6 +45,16 @@ public function fields(Request $request)
 }
 ```
 
+## Versioning
+Nova Markdown uses [semantic versioning](https://semver.org/) and aims to always support the latest major Laravel and Laravel Nova release. 
+
+Only the latest major version for Nova Markdown will receive updates, it is recommended to upgrade to the latest version of Nova Markown whenever a new major version for Laravel or Laravel Nova drops. 
+
+| Nova Markdown | Laravel | Laravel Nova |
+|:--------------|:--------|:-------------|
+| v3.x          | v9.x    | v3.x         |
+| v2.x          | v8.x    | v3.x         |
+
 ## Image uploads
 Nova Markdown supports inline image uploads. To upload an image you can drag-and-drop it onto the markdown editor. Alternatively, pasting an image from your clipboard will also work. 
 
