@@ -174,10 +174,6 @@ This package however will add some more highlighting and toolbar buttons that ar
 | Unordered lists | - | V |
 | Side-by-side view | - | V |
 
-## Todo
-
-- [ ] Write tests
-
 ## Credits
 ![Dcreative Open Source](images/dcreative-open-source.svg)
 
