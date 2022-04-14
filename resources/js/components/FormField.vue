@@ -105,36 +105,9 @@ export default {
       },
     });
 
-    if (this.field.value) {
-      this.easymde.value(this.field.value);
-    }
-
     this.easymde.codemirror.on("change", (cm, changeObj) => {
       this.value = this.easymde.value();
     });
-  },
-
-  methods: {
-    /*
-     * Set the initial, internal value for the field.
-     */
-    setInitialValue() {
-      this.value = this.field.value || "";
-    },
-
-    /**
-     * Fill the given FormData object with the field's internal value.
-     */
-    fill(formData) {
-      formData.append(this.field.attribute, this.value || "");
-    },
-
-    /**
-     * Update the field's internal value.
-     */
-    handleChange(value) {
-      this.value = value;
-    },
   },
 };
 </script>
