@@ -21,9 +21,7 @@
     "require": {
         "php": ">=7.4",
         "illuminate/support": "^9.0",
-        "spatie/image": "^2.0"
-    },
-    "require-dev": {
+        "spatie/image": "^2.0",
         "laravel/nova": "^4.0"
     },
     "autoload": {
