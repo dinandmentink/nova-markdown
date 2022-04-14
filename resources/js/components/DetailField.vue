@@ -1,20 +1,20 @@
 <template>
-  <panel-item :field="field">
-    <template slot="value">
-      <excerpt :content="excerpt" :should-show="field.shouldShow" />
+  <PanelItem :index="index" :field="field">
+    <template #value>
+      <Excerpt :content="excerpt" :should-show="field.shouldShow" />
     </template>
-  </panel-item>
+  </PanelItem>
 </template>
 
 <script>
-const md = require('markdown-it')()
+import md from 'markdown-it'
 
 export default {
-  props: ['resource', 'resourceName', 'resourceId', 'field'],
+  props: ['index', 'resource', 'resourceName', 'resourceId', 'field'],
 
   computed: {
     excerpt() {
-      return md.render(this.field.value || '')
+      return md(this.field.preset).render(this.field.value || '')
     },
   },
 }

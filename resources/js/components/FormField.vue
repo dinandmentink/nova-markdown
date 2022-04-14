@@ -1,19 +1,24 @@
 <template>
-  <default-field :field="field" :full-width-content="true">
-    <template slot="field">
+  <DefaultField
+    :field="field"
+    :full-width-content="true"
+    >
+    <template #field>
       <textarea
-        ref="mirroredTextArea"
+        ref="MarkdownArea"
         class="w-full form-control form-input form-input-bordered"
+
+        :id="field.name"
         :class="errorClasses"
         :placeholder="field.name"
-        v-model="value"
+        :value="field.value"
       />
 
       <p v-if="hasError" class="my-2 text-danger">
         {{ firstError }}
       </p>
     </template>
-  </default-field>
+  </DefaultField>
 </template>
 
 <script>
@@ -60,7 +65,7 @@ export default {
     const { resourceName, resourceId } = this;
 
     this.easymde = new easyMDE({
-      element: this.$refs.mirroredTextArea,
+      element: this.$refs.MarkdownArea,
       spellChecker: false,
       hideIcons: ["image"],
       showIcons: ["table"],
@@ -100,36 +105,9 @@ export default {
       },
     });
 
-    if (this.field.value) {
-      this.easymde.value(this.field.value);
-    }
-
     this.easymde.codemirror.on("change", (cm, changeObj) => {
       this.value = this.easymde.value();
     });
-  },
-
-  methods: {
-    /*
-     * Set the initial, internal value for the field.
-     */
-    setInitialValue() {
-      this.value = this.field.value || "";
-    },
-
-    /**
-     * Fill the given FormData object with the field's internal value.
-     */
-    fill(formData) {
-      formData.append(this.field.attribute, this.value || "");
-    },
-
-    /**
-     * Update the field's internal value.
-     */
-    handleChange(value) {
-      this.value = value;
-    },
   },
 };
 </script>
