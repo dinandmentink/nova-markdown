@@ -14,10 +14,10 @@
     "easymde": "^2.10",
     "form-backend-validation": "^2.4.0",
     "laravel-mix": "^6.0.41",
-    "markdown-it": "^12.3.2",
+    "markdown-it": "^13",
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.50.0",
-    "sass-loader": "^12.1.0",
+    "sass-loader": "^13.0",
     "vue-loader": "^16.2.0",
     "vuex": "^4.0.2"
   },
