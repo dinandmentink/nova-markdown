@@ -1,13 +1,46 @@
+//
 // ckeditor overrides to be consistent with laravel nova styling
 //
-// Works both with default nova and
-// https://github.com/gregoriohc/laravel-nova-theme-responsive
 
-.CodeMirror,
-.editor-preview-side {
-  z-index: 51 !important;
+
+//
+// Scope everything withing EaswyMDEContainer to ensure we are not messing up
+// other nova components.
+//
+
+html {
+  &:not(.dark) {
+    .EasyMDEContainer {
+      .CodeMirror {
+        color: rgba(var(--colors-gray-600),var(--tw-text-opacity)) !important;
+        background-color: rgba(var(--colors-white),var(--tw-bg-opacity)) !important;
+      }
+    }
+  }
+
+  &.dark {
+    .EasyMDEContainer {
+      .CodeMirror {
+        color: rgba(var(--colors-gray-200),var(--tw-text-opacity)) !important;
+        background-color: rgba(var(--colors-gray-800),var(--tw-bg-opacity)) !important;
+      }
+    }
+  }
+
+  .EasyMDEContainer {
+    .CodeMirror {
+      margin: unset; // Fullscreen / side by side display.
+    }
+
+    // Fix z-indexes for fullscreen editor.
+    .CodeMirror,
+    .editor-preview-side {
+      z-index: 51 !important;
+    }
+
+    .editor-toolbar.fullscreen {
+      z-index: 1001 !important;
+    }
+  }
 }
 
-.editor-toolbar.fullscreen {
-  z-index: 1001 !important;
-}
