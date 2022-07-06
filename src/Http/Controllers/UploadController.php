@@ -37,7 +37,7 @@ class UploadController extends Controller
         return config("nova-markdown.disk");
     }
 
-    private function uploadsVisibility(): String
+    private function fileVisibility(): String
     {
         return config("nova-markdown.file-visibility");
     }
@@ -68,7 +68,7 @@ class UploadController extends Controller
             $this->safeFilename($file->getClientOriginalName()),
             [
                 "disk" => $this->disk(),
-                "visibility" => $this->uploadsVisibility(),
+                "visibility" => $this->fileVisibility(),
             ],
         );
     }
