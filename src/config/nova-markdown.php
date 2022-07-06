@@ -33,6 +33,16 @@ return [
     'disk' => env("NOVA_MARKDOWN_DISK", 'public'),
 
     /**
+     * The visibility option when storing uploaded images.
+     *
+     * Files may either be declared "public" or "private". When a file is declared
+     * "public", you are indicating that the file should generally be accessible
+     * to others.
+     */
+
+    'file-visibility' => env("NOVA_MARKDOWN_FILE_VISIBILITY", 'public'),
+
+    /**
      * The directory where to place uploaded images within the disk.
      *
      * Can be a string with the directoryname. Alternatively, it's possible
