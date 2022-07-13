@@ -37,6 +37,11 @@ class UploadController extends Controller
         return config("nova-markdown.disk");
     }
 
+    private function fileVisibility(): String
+    {
+        return config("nova-markdown.file-visibility");
+    }
+
     private function maxWidth(): ?Int
     {
         return config("nova-markdown.max-width");
@@ -61,7 +66,10 @@ class UploadController extends Controller
         return $file->storeAs(
             $this->directory(),
             $this->safeFilename($file->getClientOriginalName()),
-            $this->disk()
+            [
+                "disk" => $this->disk(),
+                "visibility" => $this->fileVisibility(),
+            ],
         );
     }
 
