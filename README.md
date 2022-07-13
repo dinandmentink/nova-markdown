@@ -112,7 +112,15 @@ Config key: `disk`
 ENV: `NOVA_MARKDOWN_DISK`  
 Default: `public`
 
-Set the disk where uploads are stored. Must be configured in `filesystems.php`.
+Set the disk where uploads are stored. Must be configured in `filesystems.php`. Note that Nova Markdown stores files with [visibility public](https://laravel.com/docs/filesystem#file-visibility) by default. This might override a disks' default private setting (`'visibility' => 'private'`) on a per-file basis.
+
+**File visibility**
+
+Config key: `file-visibility`  
+ENV: `NOVA_MARKDOWN_FILE_VISIBILITY`  
+Default: `public`
+
+Uploaded files will receive this as their visibility after uploading. Change to `'private'` to set files as not publicly visible or `null` to default to the disk's default. Note however that uploading files as `private` may disallow visitors from viewing them and you may have to introduce alternative means of displaying the files.
 
 **Directory**
 
