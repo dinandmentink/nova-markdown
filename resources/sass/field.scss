@@ -12,16 +12,19 @@ html {
   &:not(.dark) {
     .EasyMDEContainer {
       .CodeMirror {
-        color: rgba(var(--colors-gray-600),var(--tw-text-opacity)) !important;
-        background-color: rgba(var(--colors-white),var(--tw-bg-opacity)) !important;
+        color: rgba(var(--colors-gray-500),var(--tw-text-opacity)) !important;
+        background-color: rgba(var(--colors-white), var(--tw-bg-opacity)) !important;
       }
     }
   }
 
   &.dark {
     .EasyMDEContainer {
-      .CodeMirror {
-        color: rgba(var(--colors-gray-200),var(--tw-text-opacity)) !important;
+      .CodeMirror,
+      .editor-toolbar.fullscreen,
+      .editor-preview-full,
+      .editor-preview-side {
+        color: rgba(var(--colors-gray-400),var(--tw-text-opacity)) !important;
         background-color: rgba(var(--colors-gray-800),var(--tw-bg-opacity)) !important;
       }
     }
@@ -30,6 +33,13 @@ html {
   .EasyMDEContainer {
     .CodeMirror {
       margin: unset; // Fullscreen / side by side display.
+    }
+
+    .editor-toolbar.fullscreen,
+    .editor-preview-side,
+    .CodeMirror.CodeMirror-fullscreen
+    {
+      z-index: 1001 !important;
     }
   }
 }
