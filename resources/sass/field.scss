@@ -31,16 +31,6 @@ html {
     .CodeMirror {
       margin: unset; // Fullscreen / side by side display.
     }
-
-    // Fix z-indexes for fullscreen editor.
-    .CodeMirror,
-    .editor-preview-side {
-      z-index: 51 !important;
-    }
-
-    .editor-toolbar.fullscreen {
-      z-index: 1001 !important;
-    }
   }
 }
 
