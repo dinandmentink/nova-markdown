@@ -2,9 +2,6 @@ const mix = require("laravel-mix");
 let path = require('path');
 
 mix
-  .alias({
-    'laravel-nova': path.join(__dirname, 'vendor/laravel/nova/resources/js/mixins/packages.js'),
-  })
   .setPublicPath("dist")
   .js("resources/js/field.js", "js")
   .vue({ version: 3 })
@@ -12,6 +9,7 @@ mix
   .webpackConfig({
       externals: {
         vue: 'Vue',
+        'laravel-nova': 'LaravelNova',
       },
       output: {
         uniqueName: 'dinandmentink/nova-markdown',
