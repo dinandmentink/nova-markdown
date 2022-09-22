@@ -45,6 +45,8 @@ public function fields(Request $request)
 }
 ```
 
+Nova Markdown uses [nova-packages-tool](https://github.com/nova-kit/nova-packages-tool) to provide a versioned `laravel-nova` mixin. Please ensure you have `@php artisan nova:publish` in your composer's `script.post-update-cmd` to [keep nova's assets updated](https://nova.laravel.com/docs/4.0/installation.html#keeping-nova-s-assets-updated).
+
 ## Versioning
 Nova Markdown uses [semantic versioning](https://semver.org/) and aims to always support the latest major Laravel and Laravel Nova release. 
 
