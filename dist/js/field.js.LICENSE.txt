@@ -10,13 +10,6 @@
  */
 
 /*!
- * The buffer module from node.js, for the browser.
- *
- * @author   Feross Aboukhadijeh <http://feross.org>
- * @license  MIT
- */
-
-/*!
  * jQuery JavaScript Library v3.6.0
  * https://jquery.com/
  *
@@ -30,12 +23,4 @@
  * Date: 2021-03-02T17:08Z
  */
 
-/*!
- * vuex v4.0.2
- * (c) 2021 Evan You
- * @license MIT
- */
-
 /*! https://mths.be/punycode v1.4.1 by @mathias */
-
-/*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
