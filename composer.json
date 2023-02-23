@@ -47,5 +47,11 @@
             "type": "composer",
             "url": "https://nova.laravel.com"
         }
+    ],
+    "require-dev": {
+        "laravel/pint": "^1.6"
+    },
+    "post-update-cmd": [
+        "./vendor/bin/pint"
     ]
 }
