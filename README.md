@@ -54,8 +54,9 @@ Only the latest major version for Nova Markdown will receive updates, it is reco
 
 | Nova Markdown | Laravel | Laravel Nova | Maintenance              |
 |:--------------|:--------|:-------------|:-------------------------|
-| v4.x          | v9.x    | v4.x         | Features, Security, Bugs |
-| v3.x          | v9.x    | v3.x         | Security                 |
+| v5.x          | v10.x   | v4.x         | Features, Security, Bugs |
+| v4.x          | v9.x    | v4.x         | Security                 |
+| v3.x          | v9.x    | v3.x         | None                     |
 | v2.x          | v8.x    | v3.x         | None                     |
 
 ## Image uploads
