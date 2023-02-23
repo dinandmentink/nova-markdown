@@ -5,7 +5,6 @@ namespace DinandMentink\Markdown\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Auth;
 use DinandMentink\Markdown\Http\Requests\UploadStoreRequest;
-use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use Spatie\Image\Image;
 use Storage;
@@ -13,53 +12,52 @@ use Str;
 
 class UploadController extends Controller
 {
-
     public function store(UploadStoreRequest $request)
     {
-        $path = $this->storeFile($request->file("image"));
+        $path = $this->storeFile($request->file('image'));
 
         return [
-            "url" => $this->url($path)
+            'url' => $this->url($path),
         ];
     }
 
-    private function directory(): String
+    private function directory(): string
     {
-        if(is_string(config("nova-markdown.directory"))) {
-            return config("nova-markdown.directory");
+        if (is_string(config('nova-markdown.directory'))) {
+            return config('nova-markdown.directory');
         }
 
-        return config("nova-markdown.directory")(Auth::user());
+        return config('nova-markdown.directory')(Auth::user());
     }
 
-    private function disk(): String
+    private function disk(): string
     {
-        return config("nova-markdown.disk");
+        return config('nova-markdown.disk');
     }
 
-    private function fileVisibility(): String
+    private function fileVisibility(): string
     {
-        return config("nova-markdown.file-visibility");
+        return config('nova-markdown.file-visibility');
     }
 
-    private function maxWidth(): ?Int
+    private function maxWidth(): ?int
     {
-        return config("nova-markdown.max-width");
+        return config('nova-markdown.max-width');
     }
 
-    private function quality(): ?Int
+    private function quality(): ?int
     {
-        return config("nova-markdown.quality");
+        return config('nova-markdown.quality');
     }
 
-    private function url(String $path): String
+    private function url(string $path): string
     {
         return Storage::disk($this->disk())->url($path);
     }
 
-    private function storeFile(UploadedFile $file): String
+    private function storeFile(UploadedFile $file): string
     {
-        if($this->isImage($file->getClientOriginalName())) {
+        if ($this->isImage($file->getClientOriginalName())) {
             $this->resize($file->path());
         }
 
@@ -67,59 +65,59 @@ class UploadController extends Controller
             $this->directory(),
             $this->safeFilename($file->getClientOriginalName()),
             [
-                "disk" => $this->disk(),
-                "visibility" => $this->fileVisibility(),
+                'disk' => $this->disk(),
+                'visibility' => $this->fileVisibility(),
             ],
         );
     }
 
-    private function resize(String $path): Void
+    private function resize(string $path): void
     {
         $image = Image::load($path);
 
-        if($this->quality()) {
+        if ($this->quality()) {
             $image->quality($this->quality());
         }
 
-        if($this->maxWidth() && $image->getWidth() > $this->maxWidth()) {
+        if ($this->maxWidth() && $image->getWidth() > $this->maxWidth()) {
             $image->width($this->maxWidth());
         }
 
         $image->save();
     }
 
-    private function isImage(String $filename): Bool
+    private function isImage(string $filename): bool
     {
         return $this->hasExtension(
             $filename,
             [
-                "bmp",
-                "gif",
-                "heif",
-                "ico",
-                "jpeg",
-                "jpg",
-                "png",
-                "svg",
-                "tiff",
-                "webp",
+                'bmp',
+                'gif',
+                'heif',
+                'ico',
+                'jpeg',
+                'jpg',
+                'png',
+                'svg',
+                'tiff',
+                'webp',
             ]
         );
     }
 
-    private function safeFilename(String $path): String
+    private function safeFilename(string $path): string
     {
         $pathinfo = pathinfo($path);
 
         return
-            Str::slug(config("nova-markdown.random_filename") ? Str::random(32) : $pathinfo["filename"]) .
-            "." .
-            $pathinfo["extension"];
+            Str::slug(config('nova-markdown.random_filename') ? Str::random(32) : $pathinfo['filename']).
+            '.'.
+            $pathinfo['extension'];
     }
 
-    private function hasExtension(String $filename, $extensions): Bool
+    private function hasExtension(string $filename, $extensions): bool
     {
-        $extensions = (Array) $extensions;
+        $extensions = (array) $extensions;
 
         return in_array(
             pathinfo($filename, PATHINFO_EXTENSION),

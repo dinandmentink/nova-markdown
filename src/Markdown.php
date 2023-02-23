@@ -28,8 +28,7 @@ class Markdown extends Field
      * This is used to set some default meta information which the FormField
      * requires.
      */
-
-    function __construct(
+    public function __construct(
         $name,
         $attribute = null,
         callable $resolveCallback = null
@@ -44,12 +43,11 @@ class Markdown extends Field
     /**
      * Enable or disable uploads on this field.
      */
-
     public function uploads(bool $enabled = true)
     {
-        if(config("nova-markdown.uploads")) {
+        if (config('nova-markdown.uploads')) {
             $this->withMeta([
-                "uploads" => $enabled,
+                'uploads' => $enabled,
             ]);
         }
 
@@ -58,16 +56,16 @@ class Markdown extends Field
 
     private function setDefaultMeta()
     {
-        if(config("nova-markdown.uploads")) {
+        if (config('nova-markdown.uploads')) {
             $this->withMeta([
-                "uploadEndpoint" => route("nova-markdown.uploads.store"),
-                "maxSize" => config("nova-markdown.max-size"),
+                'uploadEndpoint' => route('nova-markdown.uploads.store'),
+                'maxSize' => config('nova-markdown.max-size'),
             ]);
         }
 
-        if(config("nova-markdown.uploads-default-enabled")) {
+        if (config('nova-markdown.uploads-default-enabled')) {
             $this->withMeta([
-                "uploads" => config("nova-markdown.uploads"),
+                'uploads' => config('nova-markdown.uploads'),
             ]);
         }
     }
