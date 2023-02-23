@@ -20,7 +20,7 @@
     "license": "MIT",
     "require": {
         "php": ">=7.4",
-        "illuminate/support": "^9.0",
+        "illuminate/support": "^10.0",
         "spatie/image": "^2.0",
         "laravel/nova": "^4.0",
         "nova-kit/nova-packages-tool": "^1.0"
