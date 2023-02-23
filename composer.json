@@ -19,7 +19,7 @@
     "homepage": "https://github.com/dinandmentink/nova-markdown",
     "license": "MIT",
     "require": {
-        "php": ">=7.4",
+        "php": ">=8.1",
         "illuminate/support": "^10.0",
         "spatie/image": "^2.0",
         "laravel/nova": "^4.0",
