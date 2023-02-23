@@ -24,17 +24,17 @@ class UploadStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            "image" => [
-                "required",
-                "image",
-                "max:" . config("nova-markdown.max-size"),
+            'image' => [
+                'required',
+                'image',
+                'max:'.config('nova-markdown.max-size'),
             ],
-            "resourceName" => [
-                "nullable",
-                "string",
+            'resourceName' => [
+                'nullable',
+                'string',
             ],
-            "resourceId" => [
-                "nullable",
+            'resourceId' => [
+                'nullable',
             ],
         ];
     }

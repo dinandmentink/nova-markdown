@@ -2,10 +2,9 @@
 
 namespace DinandMentink\Markdown;
 
-use Laravel\Nova\Nova;
-use Laravel\Nova\Events\ServingNova;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Gate;
+use Laravel\Nova\Events\ServingNova;
+use Laravel\Nova\Nova;
 
 class FieldServiceProvider extends ServiceProvider
 {
@@ -36,10 +35,9 @@ class FieldServiceProvider extends ServiceProvider
     {
         $this->publishes(
             [
-                __DIR__.'/config/nova-markdown.php' =>
-                    config_path('nova-markdown.php'),
+                __DIR__.'/config/nova-markdown.php' => config_path('nova-markdown.php'),
             ],
-            "config"
+            'config'
         );
     }
 
