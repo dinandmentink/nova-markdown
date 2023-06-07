@@ -1,4 +1,19 @@
-![Nova Markdown](images/banner.svg)
+# EOL Notice
+
+**Laravel v10 will be the latest version supported by this package**
+
+This is a friendly upfront notice that this project will stop receiving maintenance with laravel v11. Since Laravel Nova switched to a yearly fee last year I have looked around for a good alternative. I have decided to migrate all my personal projects and customers to [filament](https://filamentphp.com/). 
+
+I'm trying to EOL this project in a responsible manner that I can commit to. Please reach out if you have any suggestions or concerns.
+
+- I will ensure this package keeps working with laravel v10 and nova v4.
+- Pull requests will be reviewed and accepted for the time being, including updates which will keep it working with future Laravel / Nova versions. I will however not be performing these updates myself.
+- If you would like to maintain a successor of this project please make a fork and reach out to me. 
+- When Laravel v11 or Nova v5 drops I will mark this project as abandoned and suggest an alternative. Which will either be a maintained fork (preferably) or [Spatie Filament Markdown Editor](https://github.com/spatie/filament-markdown-editor) which is the same editor, but for filament.
+
+I have happily maintained this project since 2019. Thanks for the pull requests, suggestions and other help. 
+
+*Sidenote. I'm a bit angry with Laravel Nova switching to a yearly license. Which forced me, as a single-person-agency, to either abandon updates or pay yearly for some 30-ish customers. For my multi-tenant products Laravel Nova became completely unusable due to it's license. I highly recommend checking out filament as an open-source alternative.*
 
 # Nova Markdown
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/dinandmentink/nova-markdown.svg?style=flat-square)](https://packagist.org/packages/dinandmentink/nova-markdown)
@@ -6,7 +21,6 @@
 ![Forks](https://img.shields.io/github/forks/dinandmentink/nova-markdown.svg?style=flat-square)
 ![Stars](https://img.shields.io/github/stars/dinandmentink/nova-markdown.svg?style=flat-square)
 ![MIT license](https://img.shields.io/github/license/dinandmentink/nova-markdown.svg?style=flat-square)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg?style=flat-square)](https://paypal.me/dinandmentink)
 
 Add a markdown editor field to Laravel Nova. Based on [easymde](https://github.com/Ionaru/easy-markdown-editor), Nova Markdown supports highlighting, some useful buttons and inline image uploads. It's simple, configurable, and it just works™.
 
@@ -197,10 +211,6 @@ This package however will add some more highlighting and toolbar buttons that ar
 | Side-by-side view | - | V |
 
 ## Credits
-![Dcreative Open Source](images/dcreative-open-source.svg)
+This project was proudly created and maintained by [Dcreative](https://www.dcreative.nl) since 2019. Dcreative is a tiny webdevelopmment agency in the Netherlands. 
 
-This project is proudly created and maintained by [Dcreative](https://www.dcreative.nl). Dcreative is a tiny webdevelopmment agency in the Netherlands. 
-
-I have benefited a lot from PHP, Laravel, and countless other open source projects. Nova Markdown is my small contribution in return. Has Nova Markdown been useful to you? Feel free to drop me a [thank-you note](mailto:dinand@dcreative.nl) or [donate a beer](https://paypal.me/dinandmentink). Regardless, I'm happy to provide Nova Markdown.
-
-*First version based on [@palauaandsons](https://github.com/palauaandsons/nova-simplemde-field/)*
+After Laravel Nova changed their license to a yearly fee Dcreative decided to switch to [filament](https://filamentphp.com/) as an admin panel and therefor no longer actively maintain this project.
