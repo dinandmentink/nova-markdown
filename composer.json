@@ -1,6 +1,7 @@
 {
     "name": "dinandmentink/nova-markdown",
     "description": "A Laravel Nova Markdown Field.",
+    "abandoned": true,
     "keywords": [
         "laravel",
         "nova",

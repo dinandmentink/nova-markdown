@@ -1,17 +1,16 @@
-# EOL Notice
+# 🫡 EOL
 
-**Laravel v10 will be the latest version supported by this package**
+**This project is abandoned. Laravel v10 was the latest version supported by this package**
 
-This is a friendly upfront notice that this project will stop receiving maintenance with laravel v11. Since Laravel Nova switched to a yearly fee last year I have looked around for a good alternative. I have decided to migrate all my personal projects and customers to [filament](https://filamentphp.com/). 
+This project is now EOL and will no longer be maintained. Please note that the [markdown field](https://nova.laravel.com/docs/4.0/resources/fields.html#markdown-field) included with laravel nova now supports file attachments.
 
-I'm trying to EOL this project in a responsible manner that I can commit to. Please reach out if you have any suggestions or concerns.
+If you would like to maintain a successor of this project please make a fork and reach out to me so I can suggest it.
 
-- I will ensure this package keeps working with laravel v10 and nova v4.
-- Pull requests will be reviewed and accepted for the time being, including updates which will keep it working with future Laravel / Nova versions. I will however not be performing these updates myself.
-- If you would like to maintain a successor of this project please make a fork and reach out to me. 
-- When Laravel v11 or Nova v5 drops I will mark this project as abandoned and suggest an alternative. Which will either be a maintained fork (preferably) or [Spatie Filament Markdown Editor](https://github.com/spatie/filament-markdown-editor) which is the same editor, but for filament.
+Since Laravel Nova switched to a yearly fee with v4.0 I have looked around for a good alternative. I have decided to migrate all my personal projects and customers to [filament](https://filamentphp.com/).
 
-I have happily maintained this project since 2019. Thanks for the pull requests, suggestions and other help. 
+**❤️ I have happily maintained this project since 2019. Thanks for the pull requests, suggestions and other help. Thanks for using this package.**
+
+---
 
 *Sidenote. I'm a bit angry with Laravel Nova switching to a yearly license. Which forced me, as a single-person-agency, to either abandon updates or pay yearly for some 30-ish customers. For my multi-tenant products Laravel Nova became completely unusable due to it's license. I highly recommend checking out filament as an open-source alternative.*
 
@@ -67,7 +66,7 @@ Nova Markdown uses [semantic versioning](https://semver.org/) and aims to always
 Only the latest major version for Nova Markdown will receive updates, it is recommended to upgrade to the latest version of Nova Markown whenever a new major version for Laravel or Laravel Nova drops. 
 
 | Nova Markdown | Laravel | Laravel Nova | Maintenance              |
-|:--------------|:--------|:-------------|:-------------------------|
+| :------------ | :------ | :----------- | :----------------------- |
 | v5.x          | v10.x   | v4.x         | Features, Security, Bugs |
 | v4.x          | v9.x    | v4.x         | Security                 |
 | v3.x          | v9.x    | v3.x         | None                     |
@@ -186,7 +185,7 @@ Default: `false`
 Uploaded images will be stored by default using a slug version of its original filename. You can set this to true to use a random filename instead.
 
 ## Security
-If you discover any security related issues, please email [dinand@dcreative.nl](mailto:dinand@dcreative.nl) instead of using the issue tracker.
+If you discover any security related issues, please email [dinand@elementon.nl](mailto:dinand@elementon.nl) instead of using the issue tracker.
 
 ## Rendering markdown
 Nova Markdown will add a markdown editor field to Nova. It does not render markdown outside Nova. For rendering the markdown in Laravel views I recommend having a look at [Laravel Markdown](https://github.com/GrahamCampbell/Laravel-Markdown) or [commonmark](https://github.com/thephpleague/commonmark).
@@ -196,21 +195,21 @@ Nova, ofcourse, offers it's own [markdown field](https://nova.laravel.com/docs/1
 
 This package however will add some more highlighting and toolbar buttons that are not included the default Markdown field. But mainly, **Nova Markdown handles image uploads**. 
 
-| Functionality | Default Markdown | Nova Markdown |
-| --- | --- | --- |
-| Strong | V | V |
-| Italic | V | V |
-| External image | V | V |
-| Link | V | V |
-| Preview | V | V |
-| Inline image upload | - | V |
-| Headings | - | V |
-| Blockquotes | - | V |
-| Ordered lists | - | V |
-| Unordered lists | - | V |
-| Side-by-side view | - | V |
+| Functionality       | Default Markdown | Nova Markdown |
+| ------------------- | ---------------- | ------------- |
+| Strong              | V                | V             |
+| Italic              | V                | V             |
+| External image      | V                | V             |
+| Link                | V                | V             |
+| Preview             | V                | V             |
+| Inline image upload | -                | V             |
+| Headings            | -                | V             |
+| Blockquotes         | -                | V             |
+| Ordered lists       | -                | V             |
+| Unordered lists     | -                | V             |
+| Side-by-side view   | -                | V             |
 
 ## Credits
-This project was proudly created and maintained by [Dcreative](https://www.dcreative.nl) since 2019. Dcreative is a tiny webdevelopmment agency in the Netherlands. 
+This project was proudly created and maintained by [Elementon](https://www.elementon.nl) since 2019. Elementon is a tiny webdevelopmment agency in the Netherlands. 
 
-After Laravel Nova changed their license to a yearly fee Dcreative decided to switch to [filament](https://filamentphp.com/) as an admin panel and therefor no longer actively maintain this project.
+After Laravel Nova changed their license to a yearly fee Elementon decided to switch to [filament](https://filamentphp.com/) as an admin panel and therefor no longer actively maintain this project.
